@@ -18,7 +18,9 @@
   "homepage": "https://github.com/theSatvik/Atlan-Backend-Challenge#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fast-two-sms": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
