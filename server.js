@@ -16,7 +16,7 @@ app.use(cors());
 
 // Middleware Methods
 
-// Validate data  middleware - Task 3
+// Validate data  middleware - Task 2
 function validateData(req, res, next) {
     const { incomePerAnnum, savingsPerAnnum, mobileNumber } = req.body;
 
@@ -48,7 +48,7 @@ async function SMS(req, res) {
 //Routes
 
 
-// Validate while insertion of a new client details - task 3
+// Validate while insertion of a new client details - task 2
 app.post('/validateNew', validateData , async (req, res) => {
     try {
         const { client_email, client_name, incomePerAnnum, savingsPerAnnum, mobileNumber } = req.body;
@@ -59,7 +59,7 @@ app.post('/validateNew', validateData , async (req, res) => {
     }
 });
 
-// Validate all and send invalid data to data collector - task 3
+// Validate all and send invalid data to data collector - task 2
 app.post('/validateAll', async (req, res) => {
     try {
         const inValid = await pool.query("SELECT * FROM clientincomedata WHERE savingsPerAnnum > incomePerAnnum");
