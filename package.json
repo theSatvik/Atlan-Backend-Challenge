@@ -21,7 +21,9 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "fast-csv": "^4.3.6",
     "fast-two-sms": "^3.0.0",
+    "fs": "0.0.1-security",
     "pg": "^8.6.0"
   },
   "devDependencies": {
