@@ -47,8 +47,27 @@ Create a Middleware which should return slangs(in some other given language) of 
      Note :  To create such type of Database the number of records could be very high and hence throughput will not be as required.
      
 2. **Translation API approach :-**
-      - **We can use google translate API [Click to translate](https://translate.google.co.in/) to find slangs of the given word efficiently**
-
+  - **We can use google translate API [Click to translate](https://translate.google.co.in/) to find slangs of the given word efficiently**
+    - **Route to find slangs of a text/word in local language**
+        - ```shell   
+                 // Find slang in local/any language 
+                   function findSlang(req, res, next) {
+                       console.log(req.query);
+                       try{
+                           const text = await translate(req.query.word, req.query.lang);
+                           // e.g. req.query.lang = 'hi' (Hindi) 
+                           // req.query.word = "Awesome" (English - auto detection)
+                           res.send(text); // Jhakaas
+                       }
+                       catch(err){
+                           res.send(err.message); 
+                       }
+                       next();
+                   };
+             ```   
+        -   Route (GET Method) :  ```shell  http://localhost:3000/getSlang  Params {lang : "hi",word : "awesome"}```
+   
+           
 ## :rocket: Task 2 
  ```shell
 A market research agency wanted to validate responses coming in against a set of business rules 
