@@ -6,7 +6,10 @@
 
 ## :bookmark_tabs: What’s In This Document
 
-- [Task 1](#rocket-Task-1-(Great-Task))
+- [Task 1](#rocket-task-1-great-task)
+- [Task 2](rocket-task-2)
+- [Task 3](#rocket-task-3)
+- [Task 4](#rocket-task-4)
 - [Dependencies Used](#ballot_box-dependencies-used)
 - [License](#memo-license)
 - [Thanks to Contributors and Sponsors](#purple_heart-thanks)
