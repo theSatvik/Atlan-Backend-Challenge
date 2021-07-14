@@ -9,16 +9,17 @@ var fastcsv = require("fast-csv");
 require('dotenv').config();
 const port = 3000;
 
-app.use("/public", express.static(__dirname + "/public"));
 // Middlewares
+
+app.use("/public", express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
 
-// Middleware Methods
+// Middlewares
 
-// Validate data  middleware - Task 2
+// Validate data middleware - Task 2
 function validateData(req, res, next) {
     const { income_per_annum, savings_per_annum, mobile_number } = req.body;
 
