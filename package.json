@@ -26,6 +26,7 @@
     "fs": "0.0.1-security",
     "google-translate-api": "^2.3.0",
     "pg": "^8.6.0",
+    "translate": "^1.2.3",
     "translate-google": "^1.4.3"
   },
   "devDependencies": {
