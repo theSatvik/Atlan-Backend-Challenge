@@ -25,7 +25,8 @@
     "fast-two-sms": "^3.0.0",
     "fs": "0.0.1-security",
     "google-translate-api": "^2.3.0",
-    "pg": "^8.6.0"
+    "pg": "^8.6.0",
+    "translate-google": "^1.4.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
