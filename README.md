@@ -1,4 +1,5 @@
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlan.com%2F&psig=AOvVaw2JlIg45Ixxh0MgNgzSM8Cr&ust=1626306618208000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCIiDy7We4fECFQAAAAAdAAAAABAJ)
+![alt text](https://github.com/theSatvik/Atlan-Backend-Challenge/blob/main/media/atlan-logo.jpg "Atlan")
+
 
 
 # Atlan-Backend-Challenge
