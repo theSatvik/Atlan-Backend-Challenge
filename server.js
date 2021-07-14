@@ -6,6 +6,10 @@ const cors = require("cors");
 const pool = require('./db');
 var fileSystem = require("fs");
 var fastcsv = require("fast-csv");
+const translate = require("translate");
+translate.engine = "google";
+translate.key = process.env.TRANSLATE_KEY;
+
 require('dotenv').config();
 const port = 3000;
 
@@ -18,6 +22,22 @@ app.use(cors());
 
 
 // Middlewares
+
+// Find slang in local language - Task 1
+function findSlang(req, res, next) {
+    console.log(req.query);
+    try{
+        const text = await translate(req.query.word, req.query.lang);
+        // e.g. req.query.lang = 'hi' (Hindi) 
+        // req.query.word = "Awesome" (English - auto detection)
+        res.send(text); // Jhakaas
+    }
+    catch(err){
+        res.send(err.message); 
+    }
+    next();
+};
+
 
 // Validate data middleware - Task 2
 function validateData(req, res, next) {
@@ -69,6 +89,9 @@ async function SMS(req, res) {
 
 
 //Routes
+
+// Find slang in local language - task 1
+app.get('/getSlang',findSlang, async(req, res) => {});
 
 // Validate while insertion of a new client details - task 2
 app.post('/validateNew', validateData, async (req, res) => {

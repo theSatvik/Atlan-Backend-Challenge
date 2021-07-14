@@ -24,7 +24,10 @@
     "fast-csv": "^4.3.6",
     "fast-two-sms": "^3.0.0",
     "fs": "0.0.1-security",
-    "pg": "^8.6.0"
+    "google-translate-api": "^2.3.0",
+    "pg": "^8.6.0",
+    "translate": "^1.2.3",
+    "translate-google": "^1.4.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
