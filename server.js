@@ -91,7 +91,7 @@ async function SMS(req, res) {
 //Routes
 
 // Find slang in local language - task 1
-app.get('/getSlang',findSlang, async(req, res) => {});
+app.get('/getSlang',findSlang, (req, res) => {});
 
 // Validate while insertion of a new client details - task 2
 app.post('/validateNew', validateData, async (req, res) => {
